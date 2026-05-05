@@ -245,6 +245,13 @@ body {
     font-size: 0.9rem;
 }
 
+.headshot-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
 .video-placeholder {
     width: 100%;
     max-width: 480px;
