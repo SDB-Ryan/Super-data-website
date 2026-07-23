@@ -15,6 +15,19 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
+// Send a GA4 event when tagged promo links are clicked (data-track="placement_name")
+document.querySelectorAll('[data-track]').forEach(el => {
+    el.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+            gtag('event', 'promo_click', {
+                promo_placement: el.dataset.track,
+                link_url: el.href,
+                transport_type: 'beacon'
+            });
+        }
+    });
+});
+
 // Rotating announcement bar
 const announcements = document.querySelectorAll('.announcement-bar.rotating a');
 if (announcements.length > 1) {
