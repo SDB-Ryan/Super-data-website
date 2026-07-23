@@ -75,6 +75,29 @@ body {
     color: #fff;
 }
 
+/* Rotating announcement bar — messages stack in the same spot and cross-fade */
+.announcement-bar.rotating .container {
+    display: grid;
+}
+
+.announcement-bar.rotating a {
+    grid-area: 1 / 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+.announcement-bar.rotating a.announcement-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .announcement-bar.rotating a {
+        transition: none;
+    }
+}
+
 .site-header {
     position: fixed;
     top: 2.25rem;

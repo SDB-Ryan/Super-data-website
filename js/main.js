@@ -14,3 +14,14 @@ navLinks.querySelectorAll('a').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+
+// Rotating announcement bar
+const announcements = document.querySelectorAll('.announcement-bar.rotating a');
+if (announcements.length > 1) {
+    let current = 0;
+    setInterval(() => {
+        announcements[current].classList.remove('announcement-active');
+        current = (current + 1) % announcements.length;
+        announcements[current].classList.add('announcement-active');
+    }, 6000);
+}
