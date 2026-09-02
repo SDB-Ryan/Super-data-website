@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Net Revenue Drivers — an interactive Ridge AI dashboard from Ryan Dolley.">
+    <meta name="robots" content="noindex">
+    <meta property="og:title" content="Net Revenue Drivers — Ryan Dolley">
+    <meta property="og:description" content="An interactive Ridge AI dashboard from Ryan Dolley.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ryandolley.com/ridge/">
+    <meta property="og:image" content="https://ryandolley.com/images/ryan-headshot.png">
+    <link rel="canonical" href="https://ryandolley.com/ridge/">
+    <title>Net Revenue Drivers — Ryan Dolley</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>RD</text></svg>">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72SGSQFECL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72SGSQFECL');
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .embed-hero {
+            padding: 8.5rem 0 1.5rem;
+            text-align: center;
+        }
+
+        .embed-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        .embed-hero p {
+            color: var(--color-text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .embed-wrap {
+            max-width: calc(1200px + 3rem);
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        .embed-wrap iframe {
+            display: block;
+            width: 100%;
+            height: max(600px, calc(100vh - 14rem));
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            background: var(--color-bg-alt);
+        }
+
+        @media (max-width: 768px) {
+            .embed-hero {
+                padding-top: 7.5rem;
+            }
+
+            .embed-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .embed-wrap iframe {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="announcement-bar rotating">
+        <div class="container">
+            <a href="/reports/gartner-bi-analysis-2026/" class="announcement-active" data-track="banner_report">
+                <strong>New free report</strong> &mdash; Gartner's 2026 BI rankings, decoded. Read it now &rarr;
+            </a>
+            <a href="https://superdatablog.substack.com" target="_blank" rel="noopener" data-track="banner_book">
+                <strong>AI in BI</strong> &mdash; the new book from Wiley is coming soon. Subscribe for updates &rarr;
+            </a>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="/" class="logo">Ryan Dolley</a>
+            <ul class="nav-links">
+                <li><a href="/#book">The Book</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#content-services">Content & Speaking</a></li>
+                <li><a href="/#sdb">Super Data Brothers</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#contact" class="nav-cta">Book an Advisory Call</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="embed-hero">
+        <div class="container">
+            <p class="hero-eyebrow">Interactive Dashboard</p>
+            <h1>Net Revenue Drivers</h1>
+            <p>Built with Ridge AI. Click into the charts to explore.</p>
+        </div>
+    </section>
+
+    <div class="embed-wrap">
+        <iframe src="https://app.ridgedata.ai/embed/9798e193-42aa-4b8c-86ac-18bbe963fee7?token=c18e48ec-80bd-4459-a76d-289dd5694ac1&sig=09684d231992247f9fa651ec0128c77f3abff87feeb1b02ebede96cdfc78b4b1" width="100%" height="600" frameborder="0" allowfullscreen title="Net Revenue Drivers dashboard"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Ryan Dolley. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/ryandolley" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.youtube.com/c/superdatabrothers" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://superdatablog.substack.com" target="_blank" rel="noopener">Substack</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
