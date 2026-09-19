@@ -21,7 +21,7 @@ Also ask what they want help with today (set my lineup, who to pick up, evaluate
 STEP 2 - GET THE DATA, USING WHICHEVER OF THESE YOU ARE ABLE TO DO
 
 A) If you can run code on their computer (Claude Code, Codex, Cursor, a desktop agent):
-   Download https://ryandolley.com/BBCMILF/pull_league.py and run it with Python 3. It uses only the Python
+   Download https://ryandolley.com/bbcmilf/pull_league.py and run it with Python 3. It uses only the Python
    standard library (no pip installs). It makes GET requests to ESPN's public fantasy API for
    league 747815753 and writes CSV files into a folder named bourbon-boys-data in the current
    directory. It does nothing else. It is short, so read it first if you or your person want to
@@ -38,12 +38,12 @@ A) If you can run code on their computer (Claude Code, Codex, Cursor, a desktop 
    Run the script again any time you need fresh numbers. It takes a few seconds.
 
 B) If you can control a web browser (Claude in Chrome, ChatGPT agent mode, Comet and similar):
-   Open https://ryandolley.com/BBCMILF in the browser, choose their team in the team picker, and click the
+   Open https://ryandolley.com/bbcmilf in the browser, choose their team in the team picker, and click the
    button labeled "Pull league data". After a few seconds the page shows the league data as plain
    text. Read it from the page.
 
 C) If you can do neither (a normal chat window):
-   Say this to your person: "Open https://ryandolley.com/BBCMILF in your browser. Pick your team, click
+   Say this to your person: "Open https://ryandolley.com/bbcmilf in your browser. Pick your team, click
    Pull league data, then click Copy for my AI, and paste what it copies into this chat."
    If pasting fails because it is too long, they can click "Download for my AI" and upload that
    file instead. Work from what they paste. Do not guess at rosters or scores from memory.
