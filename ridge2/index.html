@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Commercial Profitability: a Ridge AI dashboard from Ryan Dolley, built on the Super Data Store. Come find where the money leaks.">
+    <meta name="robots" content="noindex">
+    <meta property="og:title" content="Commercial Profitability — Ryan Dolley">
+    <meta property="og:description" content="Round two. Come find where the money leaks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ryandolley.com/ridge2/">
+    <meta property="og:image" content="https://ryandolley.com/images/ryan-headshot.png">
+    <link rel="canonical" href="https://ryandolley.com/ridge2/">
+    <title>Commercial Profitability — Ryan Dolley</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>RD</text></svg>">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72SGSQFECL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72SGSQFECL');
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .r2-hero {
+            padding: 8.5rem 0 2rem;
+            text-align: center;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.10), transparent 40%),
+                radial-gradient(circle at 85% 10%, rgba(16, 185, 129, 0.10), transparent 40%);
+        }
+        .r2-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.25);
+            border-radius: 999px;
+            padding: 0.35rem 0.9rem;
+            margin-bottom: 1.25rem;
+            animation: r2-wobble 3.5s ease-in-out infinite;
+        }
+        @keyframes r2-wobble {
+            0%, 90%, 100% { transform: rotate(0deg); }
+            93% { transform: rotate(-3deg); }
+            96% { transform: rotate(3deg); }
+        }
+        .r2-hero h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+        .r2-hero h1 .r2-hl {
+            background: linear-gradient(90deg, var(--color-primary), #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .r2-hero p {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .r2-hunt {
+            max-width: calc(1200px + 3rem);
+            margin: 0 auto;
+            padding: 0.5rem 1.5rem 2rem;
+        }
+        .r2-hunt h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .r2-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .r2-card {
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            padding: 1.1rem 1.2rem;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+        }
+        .r2-card:hover {
+            transform: translateY(-3px) rotate(-0.5deg);
+            border-color: var(--color-primary);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+        }
+        .r2-card .r2-emoji {
+            font-size: 1.6rem;
+            line-height: 1;
+            margin-bottom: 0.6rem;
+        }
+        .r2-card h3 {
+            font-size: 0.98rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+        .r2-card p {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+        .embed-wrap {
+            max-width: calc(1200px + 3rem);
+            margin: 0 auto;
+            padding: 0 1.5rem 2rem;
+        }
+        .embed-wrap iframe {
+            display: block;
+            width: 100%;
+            height: max(700px, calc(100vh - 10rem));
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            background: var(--color-bg-alt);
+        }
+        .r2-outro {
+            text-align: center;
+            padding: 0 1.5rem 4rem;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .r2-hero { padding-top: 7.5rem; }
+            .r2-hero h1 { font-size: 2rem; }
+            .embed-wrap iframe { height: 650px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .r2-badge { animation: none; }
+            .r2-card, .r2-card:hover { transition: none; transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="announcement-bar rotating">
+        <div class="container">
+            <a href="/reports/gartner-bi-analysis-2026/" class="announcement-active" data-track="banner_report">
+                <strong>New free report</strong> &mdash; Gartner's 2026 BI rankings, decoded. Read it now &rarr;
+            </a>
+            <a href="https://superdatablog.substack.com" target="_blank" rel="noopener" data-track="banner_book">
+                <strong>AI in BI</strong> &mdash; the new book from Wiley is coming soon. Subscribe for updates &rarr;
+            </a>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="/" class="logo">Ryan Dolley</a>
+            <ul class="nav-links">
+                <li><a href="/#book">The Book</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#content-services">Content & Speaking</a></li>
+                <li><a href="/#sdb">Super Data Brothers</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#contact" class="nav-cta">Book an Advisory Call</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="r2-hero">
+        <div class="container">
+            <span class="r2-badge">Ridge, round two</span>
+            <h1>Where does the <span class="r2-hl">money</span> actually go?</h1>
+            <p>A Commercial Profitability dashboard built with <a href="https://www.ridgedata.ai" target="_blank" rel="noopener">Ridge AI</a> on my Super Data Store dataset. Revenue, margin, promos, returns, and a few order lines that are quietly losing money. Everything's clickable and cross-filters. Go poke it.</p>
+        </div>
+    </section>
+
+    <section class="r2-hunt">
+        <h2>The scavenger hunt</h2>
+        <div class="r2-cards">
+            <div class="r2-card">
+                <div class="r2-emoji">📉</div>
+                <h3>Something happened in September 2025</h3>
+                <p>Open the Commercial Trend. What broke, and did it ever come back?</p>
+            </div>
+            <div class="r2-card">
+                <div class="r2-emoji">🗺️</div>
+                <h3>Find the red cell</h3>
+                <p>On the Profit Risk Map, which customer segment is losing money, and where?</p>
+            </div>
+            <div class="r2-card">
+                <div class="r2-emoji">🏷️</div>
+                <h3>Do promos pay?</h3>
+                <p>Check the Promotion Risk Frontier and Promotion by Category. Discounts buy revenue, but do they buy margin?</p>
+            </div>
+            <div class="r2-card">
+                <div class="r2-emoji">📦</div>
+                <h3>Volume vs. value</h3>
+                <p>In Category Economics, which categories sell a lot, and which actually make money?</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="embed-wrap">
+        <iframe src="https://app.ridgedata.ai/embed/deb8bc38-aa9e-446e-98a4-fdb53e6264e2?token=2505605b-e2f0-455a-ba88-7e96588da6ec&sig=dadbacf6955d0c593467aa6869b480f283fe8c4672d25654eaf2348a9e549403" width="100%" height="600" frameborder="0" allowfullscreen title="Commercial Profitability dashboard"></iframe>
+    </div>
+
+    <p class="r2-outro">Found something interesting? Tell me on <a href="https://www.linkedin.com/in/ryandolley" target="_blank" rel="noopener">LinkedIn</a>. Missed round one? <a href="/ridge/">Net Revenue Drivers is here.</a></p>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Ryan Dolley. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/ryandolley" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.youtube.com/c/superdatabrothers" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://superdatablog.substack.com" target="_blank" rel="noopener">Substack</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
